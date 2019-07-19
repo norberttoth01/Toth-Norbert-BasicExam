@@ -6,7 +6,7 @@ body {
 .data {
     position: relative;
     background: #45484d;
-    min-height: 40vh;
+    min-height: 75vh;
     width: 100vw;
 }
 
@@ -26,7 +26,7 @@ body {
     margin: 5px 30px;
 }
 .data__input {
-    
+
     padding: 5px 10px;
 }
 .data__name{
@@ -37,6 +37,7 @@ body {
 .data__search {
 
     position: absolute;
+    bottom: 0;
     right : 0;
 }
 .data__picture{
