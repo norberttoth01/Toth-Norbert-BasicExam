@@ -3,6 +3,8 @@ const GameOfThrones = {
   init() {
     this.getJson();
     this.nodeDescription = document.querySelector('.data__description');
+    this.nodeSearch = document.querySelector('.data__input');
+    console.log(this.nodeSearch);
   },
   generateID() {
     for (let i = 0; i < this.aliveCharachters.length; i += 1) {
@@ -17,6 +19,18 @@ const GameOfThrones = {
       }
     }
     return charachter;
+  },
+  search() {
+    this.nodeDescription.innerHTML = '';
+    for (let i = 0; i < this.aliveCharachters.length; i += 1) {
+      if (this.nodeSearch.value.toLowerCase() === this.aliveCharachters[i].name.toLowerCase()) {
+        this.insertPicture(this.aliveCharachters[i]);
+        this.nodeSearch.value = '';
+        return;
+      }
+    }
+    this.nodeDescription.innerHTML = "Character is not found!"
+    this.nodeSearch.value = '';
   },
   insertBio(charachter) {
     const str = `<div class="data__bio"> ${charachter.bio}</div>`;

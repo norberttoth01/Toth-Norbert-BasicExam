@@ -26,6 +26,7 @@ body {
     margin: 5px 30px;
 }
 .data__input {
+    
     padding: 5px 10px;
 }
 .data__name{
@@ -34,9 +35,9 @@ body {
     margin: 5px 30px;
 }
 .data__search {
+
     position: absolute;
-    bottom: 0;
-    right: 0;
+    right : 0;
 }
 .data__picture{
     display: block;
@@ -104,5 +105,10 @@ body {
     .data {
         height: 100vh;
         width: 25vw;
+    }
+    .data__search {
+        position: absolute;
+        bottom: 0;
+        right: 0;
     }
 }
