@@ -18,8 +18,18 @@ const GameOfThrones = {
     }
     return charachter;
   },
+  insertBio(charachter) {
+    const str = `<div class="data__bio"> ${charachter.bio}</div>`;
+    return str;
+  },
+  insertName(charachter) {
+    let str = `<div class="data__name">${charachter.name}</div>`;
+    str += this.insertBio(charachter);
+    return str;
+  },
   insertPicture(charachter) {
-    const str = `<img class="data__picture" src="${charachter.picture}">`;
+    let str = `<img class="data__picture" src="${charachter.picture}">`;
+    str += this.insertName(charachter);
     this.nodeDescription.innerHTML += str;
   },
   createDescription(id) {
@@ -39,7 +49,6 @@ const GameOfThrones = {
       <br>${this.aliveCharachters[i].name}</div>`;
     }
     document.querySelector('.map').innerHTML = str;
-    console.log(document.querySelector('Jon Snow'));
   },
   getAliveCharachters() {
     this.aliveCharachters = [];

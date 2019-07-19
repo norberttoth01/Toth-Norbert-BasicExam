@@ -19,16 +19,32 @@ body {
     text-align: center;
      width: 25%;
 }
+.data__bio{
+    margin: auto;
+    color:  #d1d9e6;
+    font-style: initial;
+    margin: 5px 30px;
+}
 .data__input {
     padding: 5px 10px;
 }
-
+.data__name{
+    color:  #d1d9e6;
+    font-style: initial;
+    margin: 5px 30px;
+}
 .data__search {
     position: absolute;
     bottom: 0;
     right: 0;
 }
-
+.data__picture{
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+  height: auto;
+}
 .data__title {
     font-size: 20pt;
     color: #d1d9e6;
@@ -58,6 +74,18 @@ body {
     body {
         display: flex;
     }
+    .data__bio{
+        font-style: initial;
+        margin: 5px 30px;
+        font-size: 15t;
+    }
+    .data__name{
+        color:  #d1d9e6;
+        font-style: initial;
+        margin: 10px 40px;
+        font-size: 20pt;
+    }
+    
     .map img{
         height:50px;
         width: 50px;
