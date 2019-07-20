@@ -10,56 +10,83 @@ body {
     width: 100vw;
 }
 
-.map > div{
+.map>div {
     box-sizing: border-box;
-    height:70px;
+    height: 70px;
     font-size: 8pt;
-    height:60px;
+    height: 60px;
     padding: 10px;
     text-align: center;
-     width: 25%;
+    width: 25%;
 }
-.data__bio{
+
+.data__bio {
     margin: auto;
-    color:  #d1d9e6;
+    color: #d1d9e6;
     font-style: initial;
     margin: 5px 30px;
 }
+
 .data__input {
 
     padding: 5px 10px;
 }
-.data__name{
-    color:  #d1d9e6;
+
+.data__name {
+    color: #d1d9e6;
     font-style: initial;
     margin: 5px 30px;
 }
+
 .data__search {
 
     position: absolute;
     bottom: 0;
-    right : 0;
+    right: 0;
 }
-.data__picture{
+
+.data__picture {
     display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 80%;
-  height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    height: auto;
 }
+
 .data__title {
     font-size: 20pt;
     color: #d1d9e6;
     text-align: center;
 }
-.map img{
+
+.map img {
     height: 25px;
-    width: 25px;    
+    width: 25px;
 }
-.map img:hover{
-    border:3px solid ;
+
+.map__img--selected {
+    position: fixed;
+    color: #d1d9e6;
+    font-size: 15pt;
+    height: 100px;
+    width: 100px;
+    left: 35%;
+    top: 40%;
+    border: 3px solid #828f85;
+    background: black;
+    border-radius: 20px;
+}
+
+.map__img--selected img {
+    height: 50px;
+    width: 50px;
+}
+
+.map img:hover {
+    border: 3px solid;
     border-radius: 50%;
 }
+
 .map {
     background-image: url('/assets/site/mapblue.jpg');
     background-position: center;
@@ -76,37 +103,53 @@ body {
     body {
         display: flex;
     }
-    .data__bio{
+
+    .data__bio {
         font-style: initial;
         margin: 5px 30px;
         font-size: 15t;
     }
-    .data__name{
-        color:  #d1d9e6;
+
+    .data__name {
+        color: #d1d9e6;
         font-style: initial;
         margin: 10px 40px;
         font-size: 20pt;
     }
-    
-    .map img{
-        height:50px;
+
+    .map img {
+        height: 50px;
         width: 50px;
     }
+
+    .map__img--selected {
+        position: relative;
+        color: #d1d9e6;
+        font-size: 15pt;
+        height: 100px;
+        width: 100px;
+        border: 3px solid #828f85;
+        background: black;
+        border-radius: 20px;
+    }
+
     .map {
         display: flex;
         min-height: 100vh;
         width: 75vw;
     }
-    .map > div{
-    font-size: 12pt;
-    width: 12.5%;
-    
+
+    .map>div {
+        font-size: 12pt;
+        width: 12.5%;
+
     }
 
     .data {
         height: 100vh;
         width: 25vw;
     }
+
     .data__search {
         position: absolute;
         bottom: 0;

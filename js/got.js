@@ -1,10 +1,18 @@
 const GameOfThrones = {
   charachters: [],
   init() {
+    this.selectednode = document.querySelector('[data-id="1"]');
     this.getJson();
     this.nodeDescription = document.querySelector('.data__description');
     this.nodeSearch = document.querySelector('.data__input');
-    console.log(this.nodeSearch);
+    this.selectednode = document.querySelector('[data-id="1"]');
+    console.log(this.selectednode);
+  },
+  animation() {
+    this.selectednode.firstChild.classList.add('map__img--selected');
+  },
+  removeAnimation() {
+    this.selectednode.firstChild.classList.remove('map__img--selected');
   },
   generateID() {
     for (let i = 0; i < this.aliveCharachters.length; i += 1) {
@@ -47,6 +55,9 @@ const GameOfThrones = {
     this.nodeDescription.innerHTML += str;
   },
   createDescription(id) {
+    this.removeAnimation();
+    this.selectednode = document.querySelector(`[data-id="${id}"]`);
+    this.animation();
     this.nodeDescription.innerHTML = '';
     const charachter = this.findCharachter(id);
     this.insertPicture(charachter);
@@ -57,10 +68,10 @@ const GameOfThrones = {
   createMap() {
     let str = '';
     for (let i = 0; i < this.aliveCharachters.length; i += 1) {
-      str += `<div data-id="${this.aliveCharachters.id}
-      " onclick="GameOfThrones.createDescription(${this.aliveCharachters[i].id})">
+      str += `<div data-id="${this.aliveCharachters[i].id}"
+       onclick="GameOfThrones.createDescription(${this.aliveCharachters[i].id})"><div>
       <img src="/${this.aliveCharachters[i].portrait}">
-      <br>${this.aliveCharachters[i].name}</div>`;
+      <br>${this.aliveCharachters[i].name}</div></div>`;
     }
     document.querySelector('.map').innerHTML = str;
   },
@@ -78,6 +89,7 @@ const GameOfThrones = {
     this.getAliveCharachters();
     this.generateID();
     this.createMap();
+    this.selectednode = document.querySelector('[data-id="1"]');
   },
   getJson() {
     const request = new XMLHttpRequest();
