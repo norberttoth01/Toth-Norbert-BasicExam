@@ -36,7 +36,7 @@ const GameOfThrones = {
         return;
       }
     }
-    this.nodeDescription.innerHTML = "Character is not found!"
+    this.nodeDescription.innerHTML = 'Character is not found!';
     this.nodeSearch.value = '';
   },
   insertBio(charachter) {

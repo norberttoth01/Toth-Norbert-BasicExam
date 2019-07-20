@@ -39,7 +39,6 @@ body {
 }
 
 .data__search {
-
     position: absolute;
     bottom: 0;
     right: 0;
@@ -124,6 +123,8 @@ body {
 
     .map__img--selected {
         position: relative;
+        left:-2%;
+        top:-10%;
         color: #d1d9e6;
         font-size: 15pt;
         height: 100px;
