@@ -6,7 +6,6 @@ const GameOfThrones = {
     this.nodeDescription = document.querySelector('.data__description');
     this.nodeSearch = document.querySelector('.data__input');
     this.selectednode = document.querySelector('[data-id="1"]');
-    console.log(this.selectednode);
   },
   animation() {
     this.selectednode.firstChild.classList.add('map__img--selected');
