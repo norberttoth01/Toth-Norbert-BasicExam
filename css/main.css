@@ -1,3 +1,8 @@
+@font-face {
+    font-family: gotFont;
+    src: url(/font/got.ttf);
+}
+
 body {
     margin: 0;
     width: 100vw;
@@ -53,8 +58,10 @@ body {
 }
 
 .data__title {
-    font-size: 20pt;
     color: #d1d9e6;
+    font-family: gotFont;
+    font-size: 20pt;
+    padding: 10px;
     text-align: center;
 }
 
@@ -67,7 +74,7 @@ body {
     position: fixed;
     color: #d1d9e6;
     font-size: 15pt;
-    height: 100px;
+    height: 110px;
     width: 100px;
     left: 35%;
     top: 40%;
@@ -123,12 +130,12 @@ body {
 
     .map__img--selected {
         position: relative;
-        left:-2%;
-        top:-10%;
+        left: -2%;
+        top: -10%;
         color: #d1d9e6;
         font-size: 15pt;
         height: 100px;
-        width: 100px;
+        width: 110px;
         border: 3px solid #828f85;
         background: #586b6e;
         border-radius: 20px;

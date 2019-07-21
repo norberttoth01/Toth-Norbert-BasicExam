@@ -49,7 +49,7 @@ const GameOfThrones = {
     return str;
   },
   insertPicture(charachter) {
-    let str = `<img class="data__picture" src="${charachter.picture}">`;
+    let str = `<img class="data__picture"  alt="${charachter.name}" src="${charachter.picture}">`;
     str += this.insertName(charachter);
     this.nodeDescription.innerHTML += str;
   },
