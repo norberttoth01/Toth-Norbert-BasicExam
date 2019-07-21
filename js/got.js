@@ -38,8 +38,7 @@ const GameOfThrones = {
     this.nodeDescription.innerHTML = '';
     for (let i = 0; i < this.aliveCharachters.length; i += 1) {
       if (this.nodeSearch.value.toLowerCase() === this.aliveCharachters[i].name.toLowerCase()) {
-        const charachter = this.aliveCharachters[i];
-        this.insertFoundChar(charachter);
+        this.insertFoundChar(this.aliveCharachters[i]);
         return;
       }
     }
