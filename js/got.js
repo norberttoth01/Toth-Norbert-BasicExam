@@ -27,12 +27,19 @@ const GameOfThrones = {
     }
     return charachter;
   },
+  insertFoundChar(charachter) {
+    this.selectednode = document.querySelector(`[data-id="${charachter.id}"]`);
+    this.animation();
+    this.insertPicture(charachter);
+    this.nodeSearch.value = '';
+  },
   search() {
+    this.removeAnimation();
     this.nodeDescription.innerHTML = '';
     for (let i = 0; i < this.aliveCharachters.length; i += 1) {
       if (this.nodeSearch.value.toLowerCase() === this.aliveCharachters[i].name.toLowerCase()) {
-        this.insertPicture(this.aliveCharachters[i]);
-        this.nodeSearch.value = '';
+        const charachter = this.aliveCharachters[i];
+        this.insertFoundChar(charachter);
         return;
       }
     }
